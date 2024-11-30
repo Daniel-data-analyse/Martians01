@@ -1,17 +1,18 @@
-x = int(input("x compomemt of first vector: "))
-y = int(input("y compomemt of first vector: "))
-z = int(input("x component of second vector: "))
-k = int(input("y component of second vector: "))
+import random
 
-def ortogonal(x, y, z, k):
-    multiply = x*z + z * k
-    if multiply == 0:
-        print("multiply =", multiply)
-        print("They are perpendicular")
-    elif x / z == y / k:
-        print("slope of first vector =", y/x)
-        print("slope of second vector =", k/z)
-        print("They are parallel")
-    else:
-        print("Neither (not parallel and not perpendicular)")
-ortogonal(x, y, z, k)
+secret_number = random.randint(1,1000)
+attempts = 0
+while True:
+    guess_number = int(input("enter you number: "))
+    attempts += 1
+    if secret_number != guess_number:
+        print("Wrong answer, try again")
+    if secret_number == guess_number:
+        print("Congratulstions, you guessed hidden number!")
+        print("Total attempts number =", attempts)
+    if guess_number < secret_number:
+        print("Hint: Hidden number is bigger than your number")
+        print("attempts number =", attempts)
+    if guess_number > secret_number:
+        print("Hint: Hidden number is smaller than your number")
+        print("attempts number =", attempts)
