@@ -1,6 +1,7 @@
 import random
+import time
 
-secret_number = random.randint(1,1000)
+secret_number = random.randint(1,10)
 attempts = 0
 while True:
     guess_number = int(input("enter you number: "))
@@ -16,3 +17,9 @@ while True:
     if guess_number > secret_number:
         print("Hint: Hidden number is smaller than your number")
         print("attempts number =", attempts)
+    if attempts == 3:
+        print("you're stupid, wait 5 seconds...")
+        attempts = 0
+        time.sleep(5)
+        print("Try again!")
+

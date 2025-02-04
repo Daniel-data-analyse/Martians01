@@ -1,21 +1,42 @@
-while True:
-    player = float(input("enter a temperature: "))
-    player1 = input("enter a temperature unit: ").capitalize()
-    tries = 1
-    def Celsius_calculator():
-        if player1 == "Fahrenheit":
-            print(f"{player} {player1} temperature in Celsius is {(player - 32) *(5/9)}C")
-        if player1 == "Kelvin":
-           print(f"{player} {player1} temperature in Celsius is {player - 273.15}C")
-        if player1 == "Reaumur":
-           print(f"{player} {player1} temperature in Celsius is {player *(5/4)}C")
-        if player1 == "Celsius":
-           print("Your input is already in Celsius!")
-           tries = tries + 1
-           if tries == 3:
-            print("Are you a stupid guy?")
-        if player1 != "Kelvin" and player1 != "Reaumur" and player != "Fahrenheit" and player1 != "Celsius":
-            print("Invalid input")
-            print("Please, try again!")
-
-    Celsius_calculator()
+import time
+import sys
+x = [0.1,0.3,0.5,0.4,0.2,0.7,0.5,0.8,0.1,0.3,0.5,0.4,0.2,0.7,0.5,0.8,0.1,0.3,0.5,0.4,0.2]
+def animate_text(text, delay=0.2):
+    for char in text:
+        sys.stdout.write(char)  
+        sys.stdout.flush()      
+    for delay in x:
+        time.sleep(delay)
+    print()  
+     
+def singa_song(lyrics, delay=0.2):
+    lyrics = [
+        "От одного взгляда до ступора",
+        "Так меня сильно будоражит",
+       " Надо мною кто то угорает",
+        "Судьба то ли ты",
+        "Она редкий вид цветов",
+        "Трогать ее не советую",
+        "Ее дикий аромат",
+        "До сих меня преследует",
+        "Удача не всегда со мной",
+        "Даже если так, ну пусть",
+        "Я скучать не перестану (нет)",
+        "Если только не свихнусь",
+        "Свихнусь",
+        "Сам себя я боюсь",
+        "Твои губы на вкус, дождусь ли я?",
+        "Лежу без чувств, руки твои на пульс",
+        "Что со мной не так, док, залечи меня",
+       "От одного взгляда до ступора",
+        "Так меня сильно будоражит",
+        "Надо мною кто то угорает",
+        "Судьба то ли ты!"
+    ]
+    for line in lyrics:
+        animate_text(line, delay=0.2)
+        y = [0.1,0.3,0.5,0.4,0.2,0.7,0.5,0.8,0.1,0.3,0.5,0.4,0.2,0.7,0.5,0.8,0.1,0.3,0.5,0.4,0.2]
+        for delay in y:
+            time.sleep(0.5) 
+        print()
+singa_song(0.1)

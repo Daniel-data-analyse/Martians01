@@ -84,7 +84,7 @@ def get_move(board, guesses):
     valid_move = False
     x, y = -1, -1
     while not valid_move:
-        move = input("Enter your move (e.g., A5): ").strip().upper()
+        move = input("Enter your move: ").strip().upper()
         if len(move) < 2 or move[0] not in string.ascii_uppercase[:len(board)] or not move[1:].isdigit():
             print("Invalid format! Use a letter and a number, e.g., A5.")
         else:
