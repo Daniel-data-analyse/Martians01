@@ -1,9 +1,12 @@
-user = input("What is the user's name? ")
-age = input("What is the user's age? ")
-country = input("What is the user's country of birth? ")
-known = input( "What is the user known for? ")
+import pandas as pdd
 
-print("What is the user's name? ", user,
-      "What is the user's age? ",  age,
-      "What is the user's country of birth? ", country,
-      "What is the user known for? ", known, end = " ")
+data = {
+  "MatMIE": ["Samarbek", "Elif", "Turar", "Ali"],
+  "MatDAIS": ["Azem", "Rustam", "Seinasyr", "Daniel"],
+  "COMIE" : ["Nursultan", "Muhammed", "Baktyiar", "Daniil"],
+  "COMEC" : ["Asyl", "Imran", "Aibek", "Aihan"]
+}
+
+df = pdd.DataFrame(data, index = [1, 2, 3, 4])
+
+print(df)
